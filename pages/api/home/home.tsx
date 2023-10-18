@@ -95,19 +95,19 @@ const Home = ({
     if (data) dispatch({ field: 'models', value: data });
   }, [data, dispatch]);
 
-  useEffect(() => {
-    dispatch({ field: 'modelError', value: getModelsError(error) });
-  }, [dispatch, error, getModelsError]);
+  // useEffect(() => {
+  //   dispatch({ field: 'modelError', value: getModelsError(error) });
+  // }, [dispatch, error, getModelsError]);
 
   // FETCH MODELS ----------------------------------------------
 
   const handleSelectConversation = (conversation: Conversation) => {
-    dispatch({
-      field: 'selectedConversation',
-      value: conversation,
-    });
+    // dispatch({
+    //   field: 'selectedConversation',
+    //   value: conversation,
+    // });
 
-    saveConversation(conversation);
+    // saveConversation(conversation);
   };
 
   // FOLDER OPERATIONS  --------------------------------------------
@@ -360,7 +360,7 @@ const Home = ({
       }}
     >
       <Head>
-        <title>Chatbot UI</title>
+        <title>One Nine Chatbot</title>
         <meta name="description" content="ChatGPT but better." />
         <meta
           name="viewport"
@@ -378,12 +378,11 @@ const Home = ({
               onNewConversation={handleNewConversation}
             />
           </div>
-
           <div className="flex h-full w-full pt-[48px] sm:pt-0">
             <Chatbar />
 
             <div className="flex flex-1">
-              <Chat stopConversationRef={stopConversationRef} />
+              {/* <Chat stopConversationRef={stopConversationRef} /> */}
             </div>
 
             <Promptbar />

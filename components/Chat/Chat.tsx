@@ -26,7 +26,7 @@ import { Plugin } from '@/types/plugin';
 import HomeContext from '@/pages/api/home/home.context';
 
 import Spinner from '../Spinner';
-import { ChatInput } from './ChatInput';
+//import { ChatInput } from './ChatInput';
 import { ChatLoader } from './ChatLoader';
 import { ErrorMessageDiv } from './ErrorMessageDiv';
 import { ModelSelect } from './ModelSelect';
@@ -489,7 +489,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
             )}
           </div>
 
-          <ChatInput
+          {/* <ChatInput
             stopConversationRef={stopConversationRef}
             textareaRef={textareaRef}
             onSend={(message, plugin) => {
@@ -503,7 +503,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
               }
             }}
             showScrollDownButton={showScrollDownButton}
-          />
+          /> */}
         </>
       )}
     </div>
